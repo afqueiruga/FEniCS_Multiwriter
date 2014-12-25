@@ -30,6 +30,8 @@ def writedata(self,i,point_data,cell_data):
     self.close_file()
 compiled_module.VTKAppender.write = writedata
 
+VTKAppender = compiled_module.VTKAppender
+
 if __name__=="__main__":
     me = UnitSquareMesh(2,2);
     V = FunctionSpace(me,"CG",1);
